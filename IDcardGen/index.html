@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>ID Card Generator</h2>
+
+        <!-- User Input Form -->
+        <div class="form">
+            <input type="text" id="name" placeholder="Enter Name" required>
+            <input type="number" id="age" placeholder="Enter Age" required>
+            <input type="text" id="address" placeholder="Enter Address" required>
+            <input type="text" id="bloodGroup" placeholder="Enter Blood Group" required>
+
+            <!-- Camera Section -->
+            <button onclick="startCamera()">Start Camera</button>
+            <video id="video" class="hidden" autoplay></video>
+            <button onclick="capturePhoto()">Capture Photo</button>
+            <canvas id="canvas" class="hidden"></canvas>
+            <img id="photo" class="hidden" />
+
+            <!-- Generate ID Card -->
+            <button onclick="generateID()">Generate ID Card</button>
+        </div>
+
+        <!-- ID Card Preview -->
+        <div class="id-card">
+            <canvas id="idCanvas"></canvas>
+            <button onclick="downloadID()">Download ID Card</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
